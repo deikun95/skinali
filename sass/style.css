@@ -8,6 +8,25 @@
   margin: auto;
 }
 
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+
 @font-face {
   font-family: 'Proxima Nova Semibold';
   src: url("../fonts/ProximaNova-Semibold.eot");
@@ -35,6 +54,7 @@ body {
   color: #507fe1;
   padding: 17px 22px;
   font-family: 'Proxima Nova Semibold', sans-serif;
+  background-color: #fff;
 }
 
 .button {
@@ -45,6 +65,12 @@ body {
   font-family: 'Proxima Nova Semibold', sans-serif;
   display: block;
   background-color: #507fe1;
+}
+
+@media (max-width: 450px) {
+  .button-o {
+    font-size: 12px;
+  }
 }
 
 .navbar {
@@ -167,6 +193,18 @@ body {
   display: block;
   font-size: 14px;
   color: #7b7b79;
+}
+
+@media (max-width: 991px) {
+  .navbar__mobile, .navbar__landline {
+    display: none;
+  }
+}
+
+@media (max-width: 634px) {
+  .navbar__logo {
+    display: none;
+  }
 }
 
 .hero {
