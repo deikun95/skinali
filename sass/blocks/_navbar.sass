@@ -75,7 +75,14 @@
         display: block
         font-size: 14px
         color: $text-color-light
-
+@media (max-width: 991px)
+    .navbar
+        &__mobile, &__landline
+            display: none
+@media (max-width: 634px)
+    .navbar
+        &__logo
+            display: none
 
 
 
