@@ -43,7 +43,6 @@ img
         border: none
         width: 30px
 
-
 .bg-secondary
     background: $bg-secondary
 .input
@@ -51,10 +50,48 @@ img
     padding-left: 30px
     border: 1px solid #dddddd
 input[type="checkbox"]
-    display: none 
+    display: none
     &:checked + label:before
         background-color: $primary
-.checkbox           
+.select
+    display: flex
+    align-items: center
+    height: 80px
+    width: 100%
+    position: relative
+    border: 1px solid #dddddd
+    &:after
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 20px
+        height: 20px
+        width: 20px
+        background: url('../img/arrow-select.png') no-repeat center
+    &:hover
+        cursor: pointer
+    &_checked
+        line-height: 80
+        width: 100%
+        padding-left: 30px
+    &__dropdown
+        position: absolute
+        top: 78px
+        width: 100%
+        background-color: #fff
+        border: 1px solid #dddddd
+        margin: 0
+        list-style: none
+        padding: 0
+        display: none
+        &_open
+            display: block
+    &__option
+        padding: 20px
+        &:hover
+            background-color: $bg-secondary
+.checkbox
     &-label
         display: flex
         align-items: center
@@ -66,21 +103,17 @@ input[type="checkbox"]
             border: 1px solid #dddddd
             margin-right: 20px
             &:hover
-            cursor: pointer
+                cursor: pointer
 @media (max-width: 450px)
     .button
         font-size: 10px
         &-o
             font-size: 12px
-    .checkbox           
+    .checkbox
         &-label
             display: flex
             align-items: center
             margin-bottom: 20px
     .section
-        padding: 60px 0
         &-title
             font-size: 24px
-
-    
-        
